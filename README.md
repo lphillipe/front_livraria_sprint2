@@ -43,6 +43,6 @@ Nenhuma etapa de instalação específica é necessária para o frontend, pois e
     ```
     (Ex: `docker run -p 8080:80 --name meu-front-livraria front-livraria`)
     * `-p 8080:80`: Mapeia a porta 8080 do seu computador para a porta 80 do container Nginx.
-    * **Importante:** Para que o frontend no container funcione, o container do **backend** também precisa estar rodando e acessível pela rede do Docker. Usar Docker Compose é a forma recomendada de gerenciar ambos juntos. A URL da API no `script.js` talvez precise ser ajustada para apontar para o nome do serviço do backend no Docker Compose (ex: `http://backend:5000`) em vez de `http://127.0.0.1:5000`.
+    * **Importante:** Para que o frontend no container funcione, o container do **backend** também precisa estar rodando e acessível pela rede do Docker.
 
 3.  Acesse a interface em `http://127.0.0.1:8080`
