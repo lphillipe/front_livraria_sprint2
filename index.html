@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Projeto Mvp Livraria Online</title>
+</head>
+
+<body>
+     <!-- Cabeçalho da Livraria -->
+    <header>
+        <div class="title">
+            <h1>Livraria Online</h1>
+        </div>
+        <div class="cart-indicator">
+            <button id="cartButton" onclick="toggleCartModal()">
+                🛒 Carrinho (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+ 
+    <!-- Formulário para adicionar livros -->
+    <section class="newItem">
+        <input type="text" id="newBook" placeholder="Título do Livro:">
+        <input type="number" id="newQuantity" placeholder="Quantidade em Estoque:">
+        <input type="text" id="newPrice" placeholder="Preço de Venda (ex: 45,90)">
+        <button onclick="newItem()" class="addBtn">Adicionar Livro ao Estoque</button> 
+    </section>
+
+    <!-- Lista de livros -->
+    <section class="books">
+        <div id="book-list-container" class="book-grid">
+
+        </div>
+    </section>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleCartModal()">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="cartItemsContainer">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <hr>
+            <div class="cart-total">
+                <strong>Total: R$ <span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-button" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </div>
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
